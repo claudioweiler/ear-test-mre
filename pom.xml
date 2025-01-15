@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.claudioweiler</groupId>
+    <artifactId>ear-test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+    <name>ear-test</name>
+    <description>Insert description for your project here.</description>
+
+    <modules>
+        <module>ear-test-lib</module>
+        <module>ejb</module>
+        <module>web</module>
+        <module>ear</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.compiler.plugin>3.13.0</version.compiler.plugin>
+        <version.ear.plugin>3.3.0</version.ear.plugin>
+        <version.ejb.plugin>3.2.1</version.ejb.plugin>
+        <version.failsafe.plugin>3.5.2</version.failsafe.plugin>
+        <version.war.plugin>3.4.0</version.war.plugin>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ear-test-lib</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ear-test-ejb</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ear-test-web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+            	<groupId>jakarta.enterprise</groupId>
+            	<artifactId>jakarta.enterprise.cdi-api</artifactId>
+            	<version>4.0.1</version>
+            </dependency>
+            <dependency>
+            	<groupId>org.hibernate.validator</groupId>
+            	<artifactId>hibernate-validator</artifactId>
+            	<version>8.0.1.Final</version>
+            </dependency>
+            <dependency>
+            	<groupId>jakarta.persistence</groupId>
+            	<artifactId>jakarta.persistence-api</artifactId>
+            	<version>3.1.0</version>
+            </dependency>
+            <dependency>
+            	<groupId>jakarta.ejb</groupId>
+            	<artifactId>jakarta.ejb-api</artifactId>
+            	<version>4.0.1</version>
+            </dependency>
+            <dependency>
+            	<groupId>jakarta.xml.bind</groupId>
+            	<artifactId>jakarta.xml.bind-api</artifactId>
+            	<version>4.0.2</version>
+            </dependency>
+            <dependency>
+            	<groupId>jakarta.annotation</groupId>
+            	<artifactId>jakarta.annotation-api</artifactId>
+            	<version>3.0.0</version>
+            </dependency>
+			<dependency>
+				<groupId>jakarta.faces</groupId>
+				<artifactId>jakarta.faces-api</artifactId>
+				<version>4.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.ws.rs</groupId>
+				<artifactId>jakarta.ws.rs-api</artifactId>
+				<version>3.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.servlet</groupId>
+				<artifactId>jakarta.servlet-api</artifactId>
+				<version>6.0.0</version>
+			</dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.compiler.plugin}</version>
+                <configuration>
+                    <!-- put your configurations here -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,19 @@
+# Common ignores
+
+## Directories
+.settings/
+target/
+bin/
+jpa-metamodel/
+
+## Files
+.checkstyle
+.classpath
+.DS_Store
+.factorypath
+.flattened-pom.xml
+.project
+.tern-project
+*.jsfdia
+
+# Project ignores
