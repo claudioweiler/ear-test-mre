@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "Inner WAR Test Servlet", urlPatterns = { "/test/lib.do" })
+@WebServlet(name = "Lib Test Servlet", urlPatterns = { "/test/lib.do" })
 public class LibTestServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
